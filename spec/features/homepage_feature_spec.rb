@@ -17,4 +17,11 @@ feature 'homepage' do
     end
   end
 
+  before do
+    Cussword.create(word: 'Duckmaster')
+  end
+  scenario 'display rudeness' do
+    visit '/cusswords'
+    expect(page).to have_content('Duckmaster')
+  end
 end
