@@ -1,7 +1,8 @@
 class CusswordsController < ApplicationController
 
   def index
-    @cusses = Cussword.all
+    @cusswords = Cussword.all
+    @cusses = @cusswords.sample(2)
   end
 
 end

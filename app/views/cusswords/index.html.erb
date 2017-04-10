@@ -1,5 +1,5 @@
 <%@cusses.each do |f|%>
-<ul>
-  <li><%=f.word%></li>
-</ul>
-<%end%>
+<%=f.word.split.map(&:capitalize).join(' ')%>
+<%end%>!!!
+
+<%= button_to "Generate Rudeness!", cusswords_path, method: :get%>
