@@ -9,19 +9,17 @@ feature 'homepage' do
     end
   end
 
-  context 'when user clicks the button' do
-    scenario 'should display a list of bad words' do
-      visit '/'
-      click_button 'Generate Rudeness!'
-      expect(page).to have_content 'Schmuck!'
+  context 'User clicks Generate Rudeness!' do
+
+    before do
+      Cussword.create(word: 'Duckmaster')
     end
+
+    scenario 'display rudeness' do
+      visit '/cusswords'
+      expect(page).to have_content('Duckmaster')
+    end
+
   end
 
-  before do
-    Cussword.create(word: 'Duckmaster')
-  end
-  scenario 'display rudeness' do
-    visit '/cusswords'
-    expect(page).to have_content('Duckmaster')
-  end
 end
