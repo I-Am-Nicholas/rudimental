@@ -5,211 +5,216 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-- aclit
-- adick
-- anal intruder
-- anal invader
-- analicker
-- anus
-- anal
-- arrse
-- arse
-- ass
-- ass bandit
-- ass clown
-- ass face
-- ass fucker
-- ass hole
-- ass load
-- ass munch
-- ass out
-- ass packer
-- ass reamer
-- ass whacker
-- ass wipe
-- ball breaker
-- ball buster
-- baller
-- balling
-- bat shit
-- batshit
-- beaver
-- beener
-- big baller
-- bigballer
-- bimbo
-- bite me
-- biteme
-- blewinski
-- blue ball
-- blue balls
-- blueball
-- blueballs
-- bullshit
-- butt bandit
-- butt buddy
-- buttpirate
-- camel toe
-- cameltoe
-- choad
-- chode
-- condom
-- coochie
-- coon
-- cootch
-- cooze
-- corn hole
-- cornhole
-- crack spackler
-- crap
-- crap face
-- crap head
-- crapface
-- craphead
-- crapper
-- cum bubble
-- cum stain
-- cuze
-- daisy chain
-- dangelberry
-- dangleberry
-- deez nuts
-- devil
-- dick nose
-- dick wad
-- dick weed
-- dicknose
-- dickwad
-- dickweed
-- dildo
-- dingleberry
-- dipstick
-- douche
-- douche bag
-- eggplant
-- ejaculator
-- finger bang
-- finger banged
-- finger banger
-- finger fuck
-- fingerbang
-- fingerbanged
-- fingerbanger
-- fingerfuck
-- fore skin
-- foreskin
-- fuck
-- fuck face
-- fucked
-- fucker
-- fuckers
-- fuckface
-- fucking
-- fucknut
-- fucknuts
-- fucks
-- fuckshit
-- fuckstick
-- fuk
-- fuker
-- fukkhead
-- fur burger
-- furbuger
-- furry burger
-- fury burger
-- fvck
-- fvcker
-- fvckface
-- fvcking
-- fvcknut
-- fvcknuts
-- hairy hatchet wound
-- hairy taco
-- hairytaco
-- hell
-- hoochie mama
-- horse shit
-- horseshit
-- hot beef injection
-- koochie
-- koochy
-- kootch
-- lettuce picker
-- lettucepicker
-- lickcock
-- licknipple
-- limpdick
-- love canal
-- mangina
-- mother fucker
-- motherfucker
-- nip
-- nipple
-- nutted
-- nutter
-- nutting
-- one way pipe
-- panocha
-- pecker
-- pecker head
-- pecker nose
-- peckerhead
-- peckernose
-- penisbreath
-- phelch
-- phelcher
-- pheltch
-- pheltcher
-- pinis wrinkle
-- piniswrinkle
-- pipe hitter
-- pipehitter
-- piss
-- pissdrinker
-- pito
-- pole sitter
-- pole smoker
-- polock
-- poontang
-- poop chute
-- poop stain
-- poopchute
-- poopstain
-- popped cherry
-- poppedcherry
-- puta
-- rectum
-- rim job
-- rimjob
-- satan
-- schlong
-- shit
-- shits
-- shit eater
-- shit face
-- shit faced
-- shit head
-- shit kicker
-- shit pusher
-- shit shover
-- shiteater
-- shitface
-- shitfaced
-- shitfucker
-- shithead
-- shitkicker
-- shitpusher
-- shitshover
-- skank
-- smegma
-- snog
-- sphincter boy
-- sphincter face
-- sphincterboy
-- sphincterface
-- testes
-- testicles
-- testicular polisher
-- titty
-- titty twisted
-- twat
+cusswords_hash = []
+strings = %w(aclit
+ adick
+ anal\ intruder
+ anal\ invader
+ analicker
+ anus
+ anal
+ arrse
+ arse
+ ass
+ ass\ bandit
+ ass\ clown
+ ass\ face
+ ass\ fucker
+ ass\ hole
+ ass\ load
+ ass\ munch
+ ass\ out
+ ass\ packer
+ ass\ reamer
+ ass\ whacker
+ ass\ wipe
+ ball\ breaker
+ ball\ buster
+ baller
+ balling
+ bat\ shit
+ batshit
+ beaver
+ beener
+ big\ baller
+ bigballer
+ bimbo
+ bite\ me
+ biteme
+ blewinski
+ blue\ ball
+ blue\ balls
+ blueball
+ blueballs
+ bullshit
+ butt\ bandit
+ butt\ buddy
+ buttpirate
+ camel\ toe
+ cameltoe
+ choad
+ chode
+ condom
+ coochie
+ coon
+ cootch
+ cooze
+ corn\ hole
+ cornhole
+ crack\ spackler
+ crap
+ crap\ face
+ crap\ head
+ crapface
+ craphead
+ crapper
+ cum\ bubble
+ cum\ stain
+ cuze
+ daisy\ chain
+ dangelberry
+ dangleberry
+ deez\ nuts
+ devil
+ dick\ nose
+ dick\ wad
+ dick\ weed
+ dicknose
+ dickwad
+ dickweed
+ dildo
+ dingleberry
+ dipstick
+ douche
+ douche\ bag
+ eggplant
+ ejaculator
+ finger\ bang
+ finger\ banged
+ finger\ banger
+ finger\ fuck
+ fingerbang
+ fingerbanged
+ fingerbanger
+ fingerfuck
+ fore\ skin
+ foreskin
+ fuck
+ fuck\ face
+ fucked
+ fucker
+ fuckers
+ fuckface
+ fucking
+ fucknut
+ fucknuts
+ fucks
+ fuckshit
+ fuckstick
+ fuk
+ fuker
+ fukkhead
+ fur\ burger
+ furbuger
+ furry\ burger
+ fury\ burger
+ fvck
+ fvcker
+ fvckface
+ fvcking
+ fvcknut
+ fvcknuts
+ hairy\ hatchet\ wound
+ hairy\ taco
+ hairytaco
+ hell
+ hoochie\ mama
+ horse\ shit
+ horseshit
+ hot-beef\ injection
+ koochie
+ koochy
+ kootch
+ lettuce\ picker
+ lettucepicker
+ lickcock
+ licknipple
+ limpdick
+ love\ canal
+ mangina
+ mother\ fucker
+ motherfucker
+ nip
+ nipple
+ nutted
+ nutter
+ nutting
+ one\ way\ pipe
+ panocha
+ pecker
+ pecker\ head
+ pecker\ nose
+ peckerhead
+ peckernose
+ penisbreath
+ phelch
+ phelcher
+ pheltch
+ pheltcher
+ pinis\ wrinkle
+ piniswrinkle
+ pipe\ hitter
+ pipehitter
+ piss
+ pissdrinker
+ pito
+ pole\ sitter
+ pole\ smoker
+ polock
+ poontang
+ poop\ chute
+ poop\ stain
+ poopchute
+ poopstain
+ popped\ cherry
+ poppedcherry
+ puta
+ rectum
+ rim\ job
+ rimjob
+ satan
+ schlong
+ shit
+ shits
+ shit\ eater
+ shit\ face
+ shit\ faced
+ shit\ head
+ shit\ kicker
+ shit\ pusher
+ shit\ shover
+ shiteater
+ shitface
+ shitfaced
+ shitfucker
+ shithead
+ shitkicker
+ shitpusher
+ shitshover
+ skank
+ smegma
+ snog
+ sphincter\ boy
+ sphincter\ face
+ sphincterboy
+ sphincterface
+ testes
+ testicles
+ testicular\ polisher
+ titty
+ titty\ twisted
+ twat)
+cusswords_hash = strings.map{|w| {word: w}}
+
+words = Cussword.create(cusswords_hash)
+p "Created #{Cussword.count} words"
