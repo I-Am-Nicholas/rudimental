@@ -1,7 +1,9 @@
-<div id= "buttons">
+<div id= "buttons" class="notranslate">
   <%= button_to "Generate Rudeness!", cusswords_path, method: :get%>
 </div>
 
 <%@cusses.each do |f|%>
 <%=f.word.split.map(&:capitalize).join(' ')%>
 <%end%>!!!
+
+<div id="google_translate_element"></div>
