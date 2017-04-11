@@ -1,3 +1,7 @@
+<div id= "buttons">
+  <%= button_to "Generate Rudeness!", cusswords_path, method: :get%>
+</div>
+
 <%@cusses.each do |f|%>
 <%=f.word.split.map(&:capitalize).join(' ')%>
 <%end%>!!!
