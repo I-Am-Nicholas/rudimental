@@ -12,7 +12,8 @@ feature 'homepage' do
   context 'User clicks Generate Rudeness!' do
 
     before do
-      Cussword.create(word: 'Duckmaster')
+      Cussword.create(word: 'Duckmaster', rating: 1)
+      Cussword.create(word: 'Fuckmaster', rating: 5)
     end
 
     scenario 'display rudeness' do
@@ -22,4 +23,8 @@ feature 'homepage' do
 
   end
 
+    scenario 'displays a ratings selector' do
+      visit '/cusswords'
+      expect(page).to have_css('div#rating')
+    end
 end

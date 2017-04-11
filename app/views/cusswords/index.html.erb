@@ -1,3 +1,11 @@
+
+<div id=rating>
+<%= form_for @cussword do |f| %>
+  <%= f.select :rating, (1..3) %>
+  <%= button_to "Generate Rudeness!"%>
+<% end %>
+</div>
+
 <%@cusses.each do |f|%>
 <%=f.word.split.map(&:capitalize).join(' ')%>
 <%end%>!!!
