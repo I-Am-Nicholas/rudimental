@@ -56,7 +56,6 @@ strings = %w(aclit
  chode
  condom
  coochie
- coon
  cootch
  cooze
  corn\ hole
@@ -214,7 +213,20 @@ strings = %w(aclit
  titty
  titty\ twisted
  twat)
-cusswords_hash = strings.map{|w| {word: w}}
+cusswords_hash = strings.map do |w|
+threes = ['anal', 'shit', 'fuck']
+twos = ['testciles', 'sphincter', 'poop']
+  if threes.any? {|x| w.include?(x)}
+    r = 3
+  elsif twos.any? {|x| w.include?(x)}
+    r = 2
+  else
+    r = 1
+  end
+
+{word: w, rating: r}
+
+end
 
 words = Cussword.create(cusswords_hash)
 p "Created #{Cussword.count} words"
