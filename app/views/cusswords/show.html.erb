@@ -1,24 +1,29 @@
-<br>
-<form id="buttons" action="/cusswords/index">
-  <p>Select degree of Rudeness!</p>
-  <input type=radio name=severity value='1'/> mild
-  <input type=radio name=severity value='2'/> temperate
-  <input type=radio name=severity value='3'/> severe
-  <div>
+<form>
+
+  <input type=radio name=severity value='1'/>   PG 13
+  <br>
+  <input type=radio name=severity value='2'/>   Mildly Irritated
+  <br>
+  <input type=radio name=severity value='3'/>   Positively Livid
+
+  <div id=default-severity>
     <%if params[:severity] == nil %>
-    <%=p 'Please click an option.'%>
+      <input type="hidden" name=severity value='1'>
+      <br>
+      <%="Auto Mode: Severity set to 'PG 13'"%>
     <%end%>
   </div>
-    <br>
-    <input type="submit"/>
 
-  <br><br><br>
+  <br><br>
+
+  <input id=sub class=button  type='submit' value='Get Rude!'/>
+
 </form>
 
 <br>
 
 <div class=response>
   <%@cusses.each do |w|%>
-    <%=w.word.split.map(&:capitalize).join('')%>
+    <%=w.word.split.map(&:capitalize).join(' ')%>
   <%end%>
 </div>

@@ -114,9 +114,8 @@ strings = %w(aclit
  fuker
  fukkhead
  fur\ burger
- furbuger
+ furburger
  furry\ burger
- fury\ burger
  fvck
  fvcker
  fvckface
@@ -214,11 +213,11 @@ strings = %w(aclit
  titty\ twisted
  twat)
 cusswords_hash = strings.map do |w|
-threes = ['anal', 'shit', 'fuck']
+threes = ['anal', 'shit', 'fuck', 'anus']
 twos = ['testciles', 'sphincter', 'poop']
   if threes.any? {|x| w.include?(x)}
     r = 3
-  elsif twos.any? {|x| w.include?(x)}
+  elsif threes.none? {|x| w.include?(x)}
     r = 2
   else
     r = 1

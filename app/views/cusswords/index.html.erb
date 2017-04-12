@@ -1,10 +1,16 @@
-<br>
-<form id="buttons" action="/cusswords/index">
-  <p>Select degree of Rudeness!</p>
-  <input id=mild type=radio name=severity value='1'/> mild
-  <input type=radio name=severity value='2'/> temperate
-  <input type=radio name=severity value='3'/> severe
-  <br><br><br>
-  <p><input id=sub type="submit"/></p>
-  <br><br><br>
+<form class=buttons action=/cusswords/show>
+
+  <input type=hidden name=severity value='1'>
+  <input id=PG13 type=radio name=severity value='1'/>   PG 13
+  <br>
+  <input type=radio name=severity value='2'/>   Mildly Irritated
+  <br>
+  <input type=radio name=severity value='3'/>   Positively Livid
+
+  <div id=default-severity></div>
+
+  <br><br>
+
+  <input id=sub class=button type='submit' value='Get Rude!'/>
+
 </form>
