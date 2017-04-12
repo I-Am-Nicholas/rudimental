@@ -1,4 +1,24 @@
-<%@cusses.each do |w|%>
-    <ul><%= w.word %>!!!  </ul>
-    <%= w.rating %>
+<br>
+<form id="buttons" action="/cusswords/index">
+  <p>Select degree of Rudeness!</p>
+  <input type=radio name=severity value='1'/> mild
+  <input type=radio name=severity value='2'/> temperate
+  <input type=radio name=severity value='3'/> severe
+  <div>
+    <%if params[:severity] == nil %>
+    <%=p 'Please click an option.'%>
+    <%end%>
+  </div>
+    <br>
+    <input type="submit"/>
+
+  <br><br><br>
+</form>
+
+<br>
+
+<div class=response>
+  <%@cusses.each do |w|%>
+    <%=w.word.split.map(&:capitalize).join('')%>
   <%end%>
+</div>

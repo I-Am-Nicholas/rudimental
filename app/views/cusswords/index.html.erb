@@ -1,18 +1,10 @@
 <br>
 <form id="buttons" action="/cusswords/index">
   <p>Select degree of Rudeness!</p>
-  <input type=radio name=severity value='1'/>mild
-  <input type=radio name=severity value='2'/>temperate
-  <input type=radio name=severity value='3'/>severe
-  <input type="submit"/>
+  <input id=mild type=radio name=severity value='1'/> mild
+  <input type=radio name=severity value='2'/> temperate
+  <input type=radio name=severity value='3'/> severe
+  <br><br><br>
+  <p><input id=sub type="submit"/></p>
   <br><br><br>
 </form>
-
-  <br>
-
-
-<div id=response>
-      <%@cusses.each do |f|%>
-        <%=f.word.split.map(&:capitalize).join(' ')%>
-      <%end%>!!!
-</div>
