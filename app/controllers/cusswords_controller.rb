@@ -4,15 +4,13 @@ class CusswordsController < ApplicationController
     @cussword = Cussword.new
     @cusswords = Cussword.all
     @cusses = @cusswords.sample(2)
-    @swear = Cussword.where(rating: params[:severity])
-    p @swear, params[:severity]
   end
 
   def show
-    @data = params[:severity]
-    # @cussword = Cussword.where(params[:severity])
-    # @level = params[:severity]
-    redirect_to cusswords_path
+    p params[:severity]
+    @cussword = Cussword.where("rating = ?", params[:severity])
+    @cusses = @cussword.sample(2)
+    $cussword = params [:id]
   end
 
 end

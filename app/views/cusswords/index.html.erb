@@ -1,5 +1,5 @@
 <br>
-<form id="buttons" action=/cusswords/show>
+<form id="buttons" action="/cusswords/index">
   <p>Select degree of Rudeness!</p>
   <input type=radio name=severity value='1'/>mild
   <input type=radio name=severity value='2'/>temperate
@@ -8,14 +8,11 @@
   <br><br><br>
 </form>
 
-  <!-- <%= button_to "Generate Rudeness!", cusswords_path%> -->
   <br>
-
 
 
 <div id=response>
       <%@cusses.each do |f|%>
-        <%f.rating%>
         <%=f.word.split.map(&:capitalize).join(' ')%>
       <%end%>!!!
 </div>
