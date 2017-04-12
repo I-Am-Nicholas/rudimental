@@ -14,7 +14,9 @@
  *= require_self
  */
  body {
-
    text-align: center;
-
  }
+
+#response {
+  font-size: 4em;
+}
