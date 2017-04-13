@@ -2,7 +2,7 @@
 <html>
 <head>
   <title>RudeyMental</title>
-<link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
 
 <!-- Latest compiled and minified CSS -->
    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -12,28 +12,37 @@
 
    <!-- Latest compiled JavaScript -->
    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
 
   <%= favicon_link_tag "favicon.ico"%>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+
+  <style>body {
+    background-image:url(&quot;./assets/Background.png&quot;);
+    background-position:center;
+    background-size:cover;
+    background-repeat:repeat-y;
+  }
+  </style>
+
 </head>
 <body>
+
   <div id= "header">
-
-    <div id="rude">RudeyMental</div>
-    <br>
-    <p>Select degree of Rudeness!</p>
-
-    <div class="row" style="background-color:#f9f9f9;">
-        <div class="col-md-4 col-md-offset-0" style="height:74px;background-color:#fcfcfc;"><a href="/" style="font-family:Oswald;font-size:57px;padding-left:35px;color:rgb(1,1,1);">Rudeymental </a></div>
+    <div class="row" style="background-color:#fff;">
+      <div class="col-md-4 col-md-offset-0" style="height:74px;background-color:#fff;"><a href="/" style="font-family:Oswald;font-size:57px;padding-left:35px;color:rgb(1,1,1);">Rudeymental </a></div>
     </div>
-    <div class="row" style="background-color:#f8f8f8;">
-        <div class="col-md-4" style="background-color:#fffdfd;">
-            <h1 style="font-size:13px;padding:0px;padding-left:37px;font-family:Merriweather;color:rgb(92,89,89);">Your first step to learning a language</h1></div>
+    <div class="row" style="background-color:#fff;">
+      <div class="col-md-4" style="background-color:#fff;">
+      <h1 style="font-size:13px;padding:0px;padding-left:37px;font-family:Merriweather;color:rgb(92,89,89);">Your first step to learning a new language</h1></div>
     </div>
-
  </div>
+ <br>
+
+<p>Select your degree of Rudeness!</p>
 <div id="content">
   <%= yield %>
 </div>

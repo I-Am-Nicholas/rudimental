@@ -1,3 +1,5 @@
+<body style="background-image:url(&quot;../assets/Background.png&quot;);background-position:center;background-size:cover;background-repeat:repeat-y;">
+
 <form>
 
   <input type=hidden name=severity value='1'>
@@ -19,5 +21,19 @@
 <div class=response>
   <%@cusses.each do |w|%>
     <%=w.word.split.map(&:capitalize).join(' ')%>
-  <%end%>
+  <%end%>!!!
 </div>
+
+<%@cusses.each do |f|%>
+<%=f.word.split.map(&:capitalize).join(' ')%>
+<%end%>!!!
+
+<div>French translation: </div>
+<%@french_words.each do |word|%>
+  <%=word%>
+<%end%>!!!
+
+<div>Hungarian translation: </div>
+<%@hun_words.each do |word|%>
+  <%=word%>
+<%end%>!!!

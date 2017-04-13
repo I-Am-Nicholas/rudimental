@@ -8,7 +8,7 @@ Rails.application.routes.draw do
 
 root 'cusswords#index', page: 'home'
 
-root 'pages#show'
+# root 'pages#show'
 
 
 resources :cusswords
