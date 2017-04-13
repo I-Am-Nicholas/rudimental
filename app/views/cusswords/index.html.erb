@@ -1,3 +1,25 @@
+
+<div id= "buttons">
+  <%= button_to "Generate Rudeness!", cusswords_path, method: :get%>
+</div>
+
+<%@cusses.each do |f|%>
+  <%=f.word.split.map(&:capitalize).join(' ')%>
+<%end%>!!!
+
+
+
+  <div>French translation: </div>
+  <%@french_words.each do |word|%>
+    <%=word%>
+  <%end%>!!!
+
+
+  <div>Hungarian translation: </div>
+  <%@hun_words.each do |word|%>
+    <%=word%>
+  <%end%>!!!
+
 <form class=buttons action=/cusswords/show>
 
   <input type=hidden name=severity value='1'>
