@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   # root 'welcome#index'
 
 
-root 'pages#show'
+
 
 root 'cusswords#index', page: 'home'
 

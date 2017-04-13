@@ -1,6 +1,30 @@
 
 
+<body style="background-image:url(&quot;./assets/Background.png&quot;);background-position:center;background-size:cover;background-repeat:repeat-y;">
+    <div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12" style="padding:117px;">
+                    <h1 style="font-family:Oswald;">Welcome Rudeys</h1>
+                    <p style="font-family:Merriweather;color:white;">Disclaimer: Apologies in advanced for the absolute filth shown on corresponding pages. Feel free to filter the level of crudeness you wish to view at your own approval. I mean why would you want to use this website anyway you dirty
+                        fucker!?</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div  id= "buttons"><%= button_to "Generate Rudeness!", cusswords_path, method: :get%></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/assets/js/jquery.min.js"></script>
+</body>
+
+
+
+
 <div id= "buttons">
   <%= button_to "Generate Rudeness!", cusswords_path, method: :get%>
 </div>
+
 

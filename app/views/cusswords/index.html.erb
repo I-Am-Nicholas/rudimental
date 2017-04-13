@@ -1,4 +1,7 @@
 
+<body style="background-image:url(&quot;./assets/Background.png&quot;);background-position:center;background-size:cover;background-repeat:repeat-y;">
+
+
 <div id= "buttons">
   <%= button_to "Generate Rudeness!", cusswords_path, method: :get%>
 </div>
@@ -20,10 +23,11 @@
     <%=word%>
   <%end%>!!!
 
+
 <form class=buttons action=/cusswords/show>
 
   <input type=hidden name=severity value='1'>
-  
+
   <input id=PG13 type=radio name=severity value='1'/>   PG 13
   <br>
   <input type=radio name=severity value='2'/>   Mildly Irritated

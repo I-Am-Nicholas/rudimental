@@ -1,7 +1,8 @@
 # Imports the Google Cloud client library
-require "google/cloud/translate"
-require 'googleauth'
-require "google/apis/storage_v1"
+# require "google/cloud/translate"
+# require 'googleauth'
+# require "google/apis/storage_v1"
+
 
 class CusswordsController < ApplicationController
   include CusswordsHelper
@@ -29,16 +30,24 @@ class CusswordsController < ApplicationController
   #   puts "Text: #{text}"
   #   puts "Translation: #{translation}"
 
-    test_translation
-    # or use this code below for the real thing(API doesn't work yet!)
-
     @cussword = Cussword.new
     @cusswords = Cussword.all
+
+
+
+    test_translation
+    # or use this code below for the real thing(API doesn't work yet!)
+    # @cusswords = Cussword.all
+    # @cusses = @cusswords.sample(2)
+
+
   end
 
   def show
     @cussword = Cussword.where("rating = ?", params[:severity])
     @cusses = @cussword.sample(2)
+    @french_words = @cusses.map { |cuss| french_translation(cuss)}
+    @hun_words = @cusses.map { |cuss| hun_translation(cuss)}
   end
 
     # @cusswords = Cussword.all

@@ -39,6 +39,17 @@ feature 'homepage' do
       find('#sub').click
       expect(page).to have_css('div.response')
 
+    # before do
+    #   Cussword.create(word: 'Duckmaster')
+    # end
+
+    scenario 'display rudeness' do
+      visit '/'
+      click_button 'Generate Rudeness'
+      expect(current_path).to eq '/cusswords'
+      # expect(page).to have_content('Hungarian translation')
+
+
     end
 
   end
