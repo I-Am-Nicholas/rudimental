@@ -1,7 +1,9 @@
-<div id= "buttons">
-  <%= button_to "Generate Rudeness!", cusswords_path, method: :get%>
-</div>
+<body style="background-image:url(&quot;./assets/Background.png&quot;);background-position:center;background-size:cover;background-repeat:repeat-y;">
+  <div id= "buttons">
+    <%= button_to "Generate Rudeness!", cusswords_path, method: :get%>
+  </div>
 
-<%@cusses.each do |f|%>
-<%=f.word.split.map(&:capitalize).join(' ')%>
-<%end%>!!!
+  <%@cusses.each do |f|%>
+  <%=f.word.split.map(&:capitalize).join(' ')%>
+  <%end%>!!!
+</body>
