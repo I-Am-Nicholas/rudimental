@@ -14,14 +14,14 @@
  *= require_self
  */
  body {
-   background-image: url(&quot;../assets/Background.png&quot;);
+   background-image: url('/../assets/Background.png');
    background-position: center;
    background-size: cover;
    background-repeat: repeat-y;
    text-align: center;
-   font-size: 2em;
+   font-size: 2.5em;
  }
-
+ 
  #rude {
    font-size: 4em;
  }
@@ -31,7 +31,6 @@
 }
 
 .button {
-   font-size: 2em;
    background-color: #fff;
    border: solid black;
    color: #000;
@@ -39,7 +38,7 @@
    text-align: center;
    text-decoration: none;
    display: inline-block;
-   font-size: 16px;
+   font-size: 1.75em;
    margin: 4px 2px;
    -webkit-transition-duration: 0.4s; /* Safari */
    transition-duration: 0.4s;
