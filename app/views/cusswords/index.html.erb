@@ -1,3 +1,4 @@
+
 <div id= "buttons">
   <%= button_to "Generate Rudeness!", cusswords_path, method: :get%>
 </div>
@@ -7,16 +8,32 @@
 <%end%>!!!
 
 
-<!-- <% unless @french_words.any?{|word| word.nil?}%> -->
+
   <div>French translation: </div>
   <%@french_words.each do |word|%>
     <%=word%>
   <%end%>!!!
-<!-- <%end%> -->
 
-<!-- <% unless @hun_words.any?{|word| word.nil?}%> -->
+
   <div>Hungarian translation: </div>
   <%@hun_words.each do |word|%>
     <%=word%>
   <%end%>!!!
-<!-- <%end%> -->
+
+<form class=buttons action=/cusswords/show>
+
+  <input type=hidden name=severity value='1'>
+  
+  <input id=PG13 type=radio name=severity value='1'/>   PG 13
+  <br>
+  <input type=radio name=severity value='2'/>   Mildly Irritated
+  <br>
+  <input type=radio name=severity value='3'/>   Positively Livid
+
+  <div id=default-severity></div>
+
+  <br><br>
+
+  <input id=sub class=button type='submit' value='Get Rude!'/>
+
+</form>
