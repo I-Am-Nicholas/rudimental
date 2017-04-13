@@ -1,4 +1,28 @@
+
 <body style="background-image:url(&quot;./assets/Background.png&quot;);background-position:center;background-size:cover;background-repeat:repeat-y;">
+
+
+<div id= "buttons">
+  <%= button_to "Generate Rudeness!", cusswords_path, method: :get%>
+</div>
+
+<%@cusses.each do |f|%>
+  <%=f.word.split.map(&:capitalize).join(' ')%>
+<%end%>!!!
+
+
+
+  <div>French translation: </div>
+  <%@french_words.each do |word|%>
+    <%=word%>
+  <%end%>!!!
+
+
+  <div>Hungarian translation: </div>
+  <%@hun_words.each do |word|%>
+    <%=word%>
+  <%end%>!!!
+
 
 <form class=buttons action=/cusswords/show>
 

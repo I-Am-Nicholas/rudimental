@@ -6,9 +6,9 @@ Rails.application.routes.draw do
   # root 'welcome#index'
 
 
-root 'cusswords#index', page: 'home'
 
-# root 'pages#show'
+
+root 'cusswords#index', page: 'home'
 
 
 resources :cusswords

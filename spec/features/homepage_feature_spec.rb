@@ -15,6 +15,15 @@ feature 'homepage' do
 
   end
 
+    # before do
+    #   Cussword.create(word: 'Duckmaster')
+    # end
+
+    scenario 'display rudeness' do
+      visit '/'
+      click_button 'Generate Rudeness'
+      expect(current_path).to eq '/cusswords'
+      # expect(page).to have_content('Hungarian translation')
 
   context 'Rating' do
 
@@ -39,6 +48,7 @@ feature 'homepage' do
       click_button 'Generate Rudeness'
       expect(current_path).to eq '/cusswords'
       # expect(page).to have_content('Hungarian translation')
+
 
     end
 

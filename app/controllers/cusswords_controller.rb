@@ -3,12 +3,11 @@
 # require 'googleauth'
 # require "google/apis/storage_v1"
 
+
 class CusswordsController < ApplicationController
   include CusswordsHelper
 
   def index
-    @cussword = Cussword.new
-    @cusswords = Cussword.all
 
   #   scopes =  ['https://www.googleapis.com/auth/cloud-platform', 'https://www.googleapis.com/auth/devstorage.read_only']
   #  authorization = Google::Auth.get_application_default(scopes)
@@ -31,6 +30,11 @@ class CusswordsController < ApplicationController
   #   puts "Text: #{text}"
   #   puts "Translation: #{translation}"
 
+    @cussword = Cussword.new
+    @cusswords = Cussword.all
+
+
+
     test_translation
     # or use this code below for the real thing(API doesn't work yet!)
     # @cusswords = Cussword.all
@@ -46,4 +50,10 @@ class CusswordsController < ApplicationController
     @hun_words = @cusses.map { |cuss| hun_translation(cuss)}
   end
 
+    # @cusswords = Cussword.all
+    # @cusses = @cusswords.sample(2)
+
+    @french_words = @cusses.map { |cuss| french_translation(cuss)}
+    @hun_words = @cusses.map { |cuss| hun_translation(cuss)}
+  end
 end
