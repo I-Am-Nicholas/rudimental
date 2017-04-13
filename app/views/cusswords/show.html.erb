@@ -1,18 +1,12 @@
 <form>
 
+  <input type=hidden name=severity value='1'>
+
   <input type=radio name=severity value='1'/>   PG 13
   <br>
   <input type=radio name=severity value='2'/>   Mildly Irritated
   <br>
   <input type=radio name=severity value='3'/>   Positively Livid
-
-  <div id=default-severity>
-    <%if params[:severity] == nil %>
-      <input type="hidden" name=severity value='1'>
-      <br>
-      <%="Auto Mode: Severity set to 'PG 13'"%>
-    <%end%>
-  </div>
 
   <br><br>
 

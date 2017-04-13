@@ -135,7 +135,6 @@ strings = %w(aclit
  kootch
  lettuce\ picker
  lettucepicker
- lickcock
  licknipple
  limpdick
  love\ canal
@@ -213,8 +212,8 @@ strings = %w(aclit
  titty\ twisted
  twat)
 cusswords_hash = strings.map do |w|
-threes = ['anal', 'shit', 'fuck', 'anus']
-twos = ['testciles', 'sphincter', 'poop']
+threes = ['anal', 'shit', 'fuck', 'anus', 'fuk']
+twos = ['testciles', 'sphincter', 'poop', 'ass', 'dick']
   if threes.any? {|x| w.include?(x)}
     r = 3
   elsif threes.none? {|x| w.include?(x)}

@@ -28,8 +28,7 @@ feature 'homepage' do
     scenario 'displays rudeness even without selected rating' do
       visit '/'
       find('#sub').click
-      find('#sub').click
-      expect(page).to have_content("Auto Mode: Severity set to 'PG 13'")
+      expect(page).to have_css('div.response')
     end
 
   end
