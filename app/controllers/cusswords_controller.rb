@@ -7,6 +7,10 @@ class CusswordsController < ApplicationController
   include CusswordsHelper
 
   def index
+    @cussword = Cussword.new
+    @cusswords = Cussword.all
+  end
+
   #   scopes =  ['https://www.googleapis.com/auth/cloud-platform', 'https://www.googleapis.com/auth/devstorage.read_only']
   #  authorization = Google::Auth.get_application_default(scopes)
   #  storage = Google::Apis::StorageV1::StorageService.new
@@ -30,11 +34,16 @@ class CusswordsController < ApplicationController
 
     test_translation
     # or use this code below for the real thing(API doesn't work yet!)
-
     # @cusswords = Cussword.all
     # @cusses = @cusswords.sample(2)
 
     @french_words = @cusses.map { |cuss| french_translation(cuss)}
     @hun_words = @cusses.map { |cuss| hun_translation(cuss)}
   end
+
+  def show
+    @cussword = Cussword.where("rating = ?", params[:severity])
+    @cusses = @cussword.sample(2)
+  end
+
 end
