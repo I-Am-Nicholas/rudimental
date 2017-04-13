@@ -3,5 +3,20 @@
 </div>
 
 <%@cusses.each do |f|%>
-<%=f.word.split.map(&:capitalize).join(' ')%>
+  <%=f.word.split.map(&:capitalize).join(' ')%>
 <%end%>!!!
+
+
+<!-- <% unless @french_words.any?{|word| word.nil?}%> -->
+  <div>French translation: </div>
+  <%@french_words.each do |word|%>
+    <%=word%>
+  <%end%>!!!
+<!-- <%end%> -->
+
+<!-- <% unless @hun_words.any?{|word| word.nil?}%> -->
+  <div>Hungarian translation: </div>
+  <%@hun_words.each do |word|%>
+    <%=word%>
+  <%end%>!!!
+<!-- <%end%> -->

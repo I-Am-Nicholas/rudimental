@@ -5,6 +5,9 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+Cussword.destroy_all
+Translation.destroy_all
 cusswords_hash = []
 strings = %w(aclit
  adick
@@ -218,3 +221,23 @@ cusswords_hash = strings.map{|w| {word: w}}
 
 words = Cussword.create(cusswords_hash)
 p "Created #{Cussword.count} words"
+
+# Seeding doesn't work with foreign key(cussword_id) values,
+# # those values were added manually to db
+translation_list = [{hun_word: "fasz", french_word: "putain"},
+  {hun_word: "szar", french_word: "merde"},
+  {hun_word: "csöcs", french_word: "téton"},
+  {hun_word: "segg", french_word: "cul"},
+  {hun_word: "faszfej", french_word:"connard"}]
+Translation.create(translation_list)
+
+# word_a = Cussword.find_by id: 94
+# word_a.create_translation(hun_word: "fasz", french_word: "putain")
+# word_b = Cussword.find_by id: 179
+# word_b.create_translation!(hun_word: "szar", french_word: "merde")
+# word_c = Cussword.find_by id: 206
+# word_c.create_translation!(hun_word: "csöcs", french_word: "téton")
+# word_d = Cussword.find_by id: 10
+# word_d.create_translation!(hun_word: "segg", french_word: "cul")
+# word_e = Cussword.find_by id: 108
+# word_e.create_translation!(hun_word: "faszfej", french_word:"connard")

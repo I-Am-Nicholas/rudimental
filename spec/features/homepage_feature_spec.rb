@@ -11,13 +11,15 @@ feature 'homepage' do
 
   context 'User clicks Generate Rudeness!' do
 
-    before do
-      Cussword.create(word: 'Duckmaster')
-    end
+    # before do
+    #   Cussword.create(word: 'Duckmaster')
+    # end
 
     scenario 'display rudeness' do
-      visit '/cusswords'
-      expect(page).to have_content('Duckmaster')
+      visit '/'
+      click_button 'Generate Rudeness'
+      expect(current_path).to eq '/cusswords'
+      # expect(page).to have_content('Hungarian translation')
     end
 
   end
