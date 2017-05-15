@@ -1,35 +1,18 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
 
 Cussword.destroy_all
-Translation.destroy_all
 cusswords_hash = []
 strings = %w(aclit
  adick
- anal\ intruder
- anal\ invader
  analicker
  anus
  anal
  arrse
  arse
  ass
- ass\ bandit
  ass\ clown
  ass\ face
- ass\ fucker
  ass\ hole
- ass\ load
- ass\ munch
  ass\ out
- ass\ packer
- ass\ reamer
- ass\ whacker
  ass\ wipe
  ball\ breaker
  ball\ buster
@@ -50,13 +33,8 @@ strings = %w(aclit
  blueball
  blueballs
  bullshit
- butt\ bandit
- butt\ buddy
- buttpirate
  camel\ toe
  cameltoe
- choad
- chode
  condom
  coochie
  cootch
@@ -72,8 +50,6 @@ strings = %w(aclit
  crapper
  cum\ bubble
  cum\ stain
- cuze
- daisy\ chain
  dangelberry
  dangleberry
  deez\ nuts
@@ -156,19 +132,17 @@ strings = %w(aclit
  pecker\ nose
  peckerhead
  peckernose
- penisbreath
  phelch
  phelcher
  pheltch
  pheltcher
- pinis\ wrinkle
- piniswrinkle
+ penis\ wrinkle
+ peniswrinkle
  pipe\ hitter
  pipehitter
  piss
  pissdrinker
  pito
- pole\ sitter
  pole\ smoker
  polock
  poontang
@@ -191,16 +165,11 @@ strings = %w(aclit
  shit\ faced
  shit\ head
  shit\ kicker
- shit\ pusher
- shit\ shover
  shiteater
  shitface
  shitfaced
- shitfucker
  shithead
  shitkicker
- shitpusher
- shitshover
  skank
  smegma
  snog
@@ -212,8 +181,7 @@ strings = %w(aclit
  testicles
  testicular\ polisher
  titty
- titty\ twisted
- twat)
+ titty\ twisted)
 cusswords_hash = strings.map do |w|
 threes = ['anal', 'shit', 'fuck', 'anus', 'fuk']
 twos = ['testciles', 'sphincter', 'poop', 'ass', 'dick']
@@ -231,23 +199,3 @@ end
 
 words = Cussword.create(cusswords_hash)
 p "Created #{Cussword.count} words"
-
-# Seeding doesn't work with foreign key(cussword_id) values,
-# # those values were added manually to db
-translation_list = [{hun_word: "fasz", french_word: "putain"},
-  {hun_word: "szar", french_word: "merde"},
-  {hun_word: "csöcs", french_word: "téton"},
-  {hun_word: "segg", french_word: "cul"},
-  {hun_word: "faszfej", french_word:"connard"}]
-Translation.create(translation_list)
-
-# word_a = Cussword.find_by id: 94
-# word_a.create_translation(hun_word: "fasz", french_word: "putain")
-# word_b = Cussword.find_by id: 179
-# word_b.create_translation!(hun_word: "szar", french_word: "merde")
-# word_c = Cussword.find_by id: 206
-# word_c.create_translation!(hun_word: "csöcs", french_word: "téton")
-# word_d = Cussword.find_by id: 10
-# word_d.create_translation!(hun_word: "segg", french_word: "cul")
-# word_e = Cussword.find_by id: 108
-# word_e.create_translation!(hun_word: "faszfej", french_word:"connard")

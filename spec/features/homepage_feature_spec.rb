@@ -10,7 +10,6 @@ feature 'homepage' do
       find('#PG13').click
       find('#sub').click
       expect(page).to have_css('div.response')
-      # ...and rating indicator matches selected option?
     end
 
   end
@@ -29,17 +28,12 @@ feature 'homepage' do
       visit '/'
       find('#sub').click
       expect(page).to have_css('div.response')
-
-    # before do
-    #   Cussword.create(word: 'Duckmaster')
-    # end
+    end
 
     scenario 'display rudeness' do
       visit '/'
-      click_button 'Generate Rudeness'
-      expect(current_path).to eq '/cusswords'
-      # expect(page).to have_content('Hungarian translation')
-
+      click_button 'Get Rude!'
+      expect(current_path).to eq '/cusswords/show'
     end
 
   end

@@ -1,8 +1,6 @@
 <body style="background-image:url(&quot;../assets/Background.png&quot;);background-position:center;background-size:cover;background-repeat:repeat-y;">
 
-<form>
-
-  <input type=hidden name=severity value='1'>
+  <form class=buttons action=/cusswords/show>
 
   <input type=radio name=severity value='1'/>   PG 13
   <br>
@@ -12,7 +10,7 @@
 
   <br><br>
 
-  <input id=sub class=button  type='submit' value='Get Rude!'/>
+  <input id=sub class=button  type='submit' value='Get dude!'/>
 
 </form>
 
@@ -20,20 +18,6 @@
 
 <div class=response>
   <%@cusses.each do |w|%>
-    <%=w.word.split.map(&:capitalize).join(' ')%>
+    <%=p w.word.split.map(&:capitalize).join(' ')%>
   <%end%>!!!
 </div>
-
-<!-- <%@cusses.each do |f|%>
-<%=f.word.split.map(&:capitalize).join(' ')%>
-<%end%>!!! -->
-
-<!-- <div>French translation: </div>
-<%@french_words.each do |word|%>
-  <%=word%>
-<%end%>!!!
-
-<div>Hungarian translation: </div>
-<%@hun_words.each do |word|%>
-  <%=word%>
-<%end%>!!! -->
