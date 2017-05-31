@@ -1,9 +1,6 @@
 
 Cussword.destroy_all
-strings = %w(aclit
- adick
- analicker
- anus
+strings = %w(anus
  anal
  arrse
  arse
@@ -119,6 +116,8 @@ strings = %w(aclit
  mangina
  mother\ fucker
  motherfucker
+ motherfucker
+ motherfucker
  nip
  nipple
  nutted
@@ -183,8 +182,8 @@ strings = %w(aclit
  titty\ twisted)
 cusswords_hash = []
 cusswords_hash = strings.map do |w|
-  threes = ['anal', 'shit', 'fuck', 'anus', 'fuk']
-  twos = ['testciles', 'sphincter', 'poop', 'ass', 'dick']
+  threes = ['anal', 'shit', 'fuck', 'anus', 'fuk', 'fvck']
+  twos = ['testciles', 'sphincter', 'poop', 'ass', 'dick', 'arse']
   if threes.any? {|x| w.include?(x)}
     r = 3
   elsif twos.any? {|x| w.include?(x)}
