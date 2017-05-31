@@ -3,12 +3,12 @@ class CusswordsController < ApplicationController
 
   def index
     @cussword = Cussword.new
-    @cusswords = Cussword.all
   end
 
   def show
-    @cussword = Cussword.where("rating = ?", params[:severity])
+    session[:x] = params[:severity]
+    @sess = session[:x]
+    @cussword = Cussword.where("rating = ?", @sess)
     @cusses = @cussword.sample(2)
   end
-
 end

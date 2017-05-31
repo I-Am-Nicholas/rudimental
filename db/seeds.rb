@@ -1,6 +1,5 @@
 
 Cussword.destroy_all
-cusswords_hash = []
 strings = %w(aclit
  adick
  analicker
@@ -182,19 +181,18 @@ strings = %w(aclit
  testicular\ polisher
  titty
  titty\ twisted)
+cusswords_hash = []
 cusswords_hash = strings.map do |w|
-threes = ['anal', 'shit', 'fuck', 'anus', 'fuk']
-twos = ['testciles', 'sphincter', 'poop', 'ass', 'dick']
+  threes = ['anal', 'shit', 'fuck', 'anus', 'fuk']
+  twos = ['testciles', 'sphincter', 'poop', 'ass', 'dick']
   if threes.any? {|x| w.include?(x)}
     r = 3
-  elsif threes.none? {|x| w.include?(x)}
+  elsif twos.any? {|x| w.include?(x)}
     r = 2
   else
     r = 1
   end
-
-{word: w, rating: r}
-
+    {word: w, rating: r}
 end
 
 words = Cussword.create(cusswords_hash)
